@@ -1,10 +1,6 @@
 void main(List<String> args) {
   //! EASY
   // convert string to int
-  String number = '10';
-  int number2;
-  number2 = int.parse(number);
-  print(number2);
   // output should be 10
 
   // convert int to string
