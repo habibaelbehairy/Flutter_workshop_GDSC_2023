@@ -3,17 +3,26 @@ void main(List<String> args) {
   // convert string to int
   String number = '10';
   int number2;
+  number2 = int.parse(number);
+  print(number2);
   // output should be 10
 
   // convert int to string
   int number3 = 10;
   String number4;
+  number4 = number3.toString();
+  print(number4);
   // output should be '10'
 
   // uppercase and lowercase a string
   String name = 'ahmed';
   String upperCaseName;
   String lowerCaseName;
+  upperCaseName = name.toUpperCase();
+  lowerCaseName = name.toLowerCase();
+  print(upperCaseName);
+  print(lowerCaseName);
+
   // output should be AHMED and ahmed
 
   // check if a string is empty or not
@@ -21,12 +30,26 @@ void main(List<String> args) {
   String name3 = 'ahmed';
   bool isEmpty;
   bool isNotEmpty;
+  //name2
+  isEmpty = name2.isEmpty;
+  isNotEmpty = name2.isNotEmpty;
+  print(isEmpty);
+  print(isNotEmpty);
+  //name3
+  isEmpty = name3.isEmpty;
+  isNotEmpty = name3.isNotEmpty;
+  print(isNotEmpty);
+  print(isEmpty);
+
   // output should be true and false
 
   // check if a string contains a substring
   String name4 = 'ahmed';
   String substring = 'med';
   bool contains;
+  contains = name4.contains(substring); //substring returns string
+  print(contains); //contains check if string is substring
+
   // output should be true
 
   // check the type of a variable
@@ -34,6 +57,17 @@ void main(List<String> args) {
   int number5 = 10;
   bool isString;
   bool isInt;
+  //name5
+  isString = name5 is String;
+  isInt = name5 is int;
+  print(isString);
+  print(isInt);
+  //number5
+  isString = number5 is String;
+  isInt = number5 is int;
+  print(isInt);
+  print(isString);
+
   // output should be true and false
 
   //! MEDIUM
