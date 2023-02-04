@@ -47,7 +47,9 @@ void main(List<String> args) {
     {'name': 'Jane', 'age': '25'},
     {'name': 'Jim', 'age': '35'}
   ];
-//   List<Map<String, String>>=Map.fromEntries(people.where((element) => element="John";));
-   // output should be [{'name': 'John', 'age': '30'}]
+List<Map<String, String>> filteredPeople =people.where((element) => element['name'] == 'John').toList(); //element is map and name is the key of map
+print(filteredPeople);
+// output should be [{'name': 'John', 'age': '30'}]
 // }
 }
+
