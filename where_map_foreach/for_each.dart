@@ -82,7 +82,7 @@ void main(List<String> args) {
   // Sort a Map by its keys and values
   Map<String, int> alphabets = {'b': 2, 'a': 1, 'c': 3};
   Map<String, int> sortedAlphabets = Map.fromEntries(
-      alphabets.entries.toList()..sort((e1, e2) => e1.key.compareTo(e2.key)));
+      alphabets.entries.toList()..sort((e1, e2) => e1.key.compareTo(e2.key))); //3mlt search 3leha
   print(sortedAlphabets);
   // output should be {'a': 1, 'b': 2, 'c': 3}
 
