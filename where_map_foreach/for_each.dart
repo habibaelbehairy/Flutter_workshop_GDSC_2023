@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main(List<String> args) {
   //! easy
   // print the values of the list using for each method in list
