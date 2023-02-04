@@ -1,12 +1,21 @@
+import 'dart:io';
+
 void main(List<String> args) {
   //! easy
   // print the values of the list using for each method in list
   List<String> names = ['John', 'Jane', 'Jim', 'Jill'];
+  names.forEach((element) {
+    stdout.write(element + ' '); //to print in one line using library
+    //print("$element ");
+  });
+  print(" ");
   // output should be John Jane Jim Jill
 
   // Print the index and value of each element in a list of integers:
   List<int> numbers = [1, 2, 3, 4, 5];
-  numbers.forEach((element) {});
+  numbers.forEach((element) {
+    print("${numbers.indexOf(element)}: $element");
+  });
   // output should be
   //0: 1
   //1: 2
@@ -19,13 +28,24 @@ void main(List<String> args) {
   List<String> words = ['Dart', 'Flutter', 'Angular'];
   bool contains = false;
   String search = 'Flutter';
+  // words.forEach((element) {
+  //   print(element == search ? true : false);
+  // });
+  words.forEach((element) {
+    if (element == search) {
+      print(true);
+    }
+  });
+
   // print true if the list contains the search string
-  
+
   //! hard
   // double the values in the map using for each
   Map<String, int> map = {"a": 1, "b": 2, "c": 3, "d": 4};
-  Map<String, int> doubledMap = {};
-  map.forEach((key, value) {});
+  map.forEach((key, value) {
+    value * 2;
+  });
+  //print(map);
   // output should be {"a": 2, "b": 4, "c": 6, "d": 8}
 
   // Write a function that takes a List of Maps and returns a Map with the sum of values for each key
@@ -40,7 +60,9 @@ void main(List<String> args) {
 
   // Sort a Map by its keys and values
   Map<String, int> alphabets = {'b': 2, 'a': 1, 'c': 3};
-  Map<String, int> sortedAlphabets;
+  Map<String, int> sortedAlphabets = Map.fromEntries(
+      alphabets.entries.toList()..sort((e1, e2) => e1.key.compareTo(e2.key)));
+  print(sortedAlphabets);
   // output should be {'a': 1, 'b': 2, 'c': 3}
 
   // Filter the map using for each if the value is greater than 3

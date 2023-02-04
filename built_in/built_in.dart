@@ -74,10 +74,13 @@ void main(List<String> args) {
 
   // convert map into Key- Value pairs in list without using for loop
   List<MapEntry<String, int>> entries;
+  var x = grades.entries.toList();
+  print(x);
 
   // convert this list into set
   List<int> numbers = [1, 2, 3, 4, 5, 1, 2, 3];
-  Set<int> uniqueNumbers;
+  Set<int> uniqueNumbers = numbers.toSet();
+  print(uniqueNumbers);
 
   // check if "Ahmed" exsist in the map or not without using for loop
   Map<String, int> grades2 = {
@@ -88,7 +91,8 @@ void main(List<String> args) {
     'Mohamed': 82,
     'Ali': 90
   };
-  bool isAhmedExist;
+  bool isAhmedExist = grades2.containsKey('Ahmed');
+  print(isAhmedExist);
 
   // check if "Ahmed" exsist in the List or not without using for loop
 
@@ -101,7 +105,8 @@ void main(List<String> args) {
     'Ali'
   ];
 
-  bool isAhmedExistInList;
+  bool isAhmedExistInList = names.asMap().containsKey('Ahmed');
+  print(isAhmedExist);
 
   //! BONUS NULL SAFETY
   // Search for this "??" double question mark in the code and try to understand what it does
@@ -109,8 +114,12 @@ void main(List<String> args) {
   // check if the name is null or not if it is null then return "John" else return the name
   String? namee;
   String defaultName = 'John Doe';
-  String actualName;
-
+  String actualName1 = namee ?? "john" ;
+ // String actualName = namee == null ? "john" : defaultName;
+  
+  print(actualName1);
   // check if the name is null or not if it is null then return "John" else return the name
+
+  // /?? returns left side except when null is in the left side it returns the right side
 }
 // YASSIN UPDATE
