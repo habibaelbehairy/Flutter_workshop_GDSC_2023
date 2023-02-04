@@ -105,7 +105,7 @@ void main(List<String> args) {
     "person2": {"name": "Jane", "age": 25},
     "person3": {"name": "Jim", "age": 35},
   };
-  Map<String, dynamic> result = {};
+  Map<String, dynamic> result = {}; 
   mapOfMaps.forEach((key, value) {
     //for each for first map
     value.forEach((key2, value2) {
